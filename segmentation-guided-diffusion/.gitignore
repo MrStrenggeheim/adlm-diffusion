@@ -1,0 +1,7 @@
+*.err
+*.out
+/runs
+/output
+/logs
+__pycache__
+__init__.py

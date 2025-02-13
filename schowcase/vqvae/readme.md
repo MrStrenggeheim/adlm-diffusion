@@ -1,0 +1,1 @@
+This folder shows originals (top) and reconstructions (bottom) of our latest VQ-VAE version encoding images or labels into a 32x32x4 representation and back.

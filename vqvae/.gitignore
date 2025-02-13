@@ -1,0 +1,12 @@
+runs/
+*.err
+*.out
+data/
+__pycache__
+.vscode/
+**.swp 
+playground*
+results/
+.ipynb_checkpoints/
+samples/
+logs/

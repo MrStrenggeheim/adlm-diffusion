@@ -1,0 +1,2 @@
+Date,Directory,PSNR,SSIM,FID,Dice,Dice_gen
+2025-02-13 23:39:27,/vol/miltank/projects/practical_WS2425/diffusion/code/evaluation/input/amos_ct_all_axis/final/,20.25761399273954,0.6184992932023939,61.498112639712815,0.927455368471783,0.9269119495747873
