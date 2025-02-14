@@ -16,6 +16,7 @@ from torch import nn
 from training import TrainingConfig
 
 from utils.amos import AmosDataset, parse_transforms
+from utils.utils import make_grid
 
 
 def main(
@@ -24,6 +25,7 @@ def main(
     output_dir,
     ckpt_path,
     num_eval_batches,
+    num_preds_per_seg,
     img_size,  # used for transform
     num_img_channels,  # 1, 3, or load as array
     load_images_as_np_arrays,  # if True, load img and seg as tensor. expect .pt, using torch.load
@@ -170,23 +172,35 @@ def main(
     os.makedirs(os.path.join(output_dir, "seg"), exist_ok=True)
     os.makedirs(os.path.join(output_dir, "img"), exist_ok=True)
 
+    print(
+        f"Starting inference of {num_eval_batches} batches of {eval_batch_size} images"
+    )
+
     for batch_idx, batch in enumerate(data_loader):
         if batch_idx >= num_eval_batches:
             break
         # print([(k, batch[k].shape) for k in batch.keys()])
         # print([np.unique(batch[k].numpy()) for k in batch.keys()])
-        if config.segmentation_guided:
-            images = pipeline(
-                batch_size=eval_batch_size,
-                seg_batch=batch,
-            ).images
-        else:
-            images = pipeline(
-                batch_size=eval_batch_size,
-            ).images
+        images_list = []
+        for i in range(num_preds_per_seg):
+            print(f"Generating pass {i} for batch {batch_idx}")
+            if config.segmentation_guided:
+                images = pipeline(
+                    batch_size=eval_batch_size,
+                    seg_batch=batch,
+                ).images
+            else:
+                images = pipeline(
+                    batch_size=eval_batch_size,
+                ).images
+            images_list.append(images)
+        # list of list PIL Image (list of batches)
+        # (N, B, C, H, W) -> (B, N, C, H, W)
+        images_list = list(zip(*images_list))
 
-        for i, pred in enumerate(images):
-            pred.save(
+        for i, pred in enumerate(images_list):  # for each batch
+            grid = make_grid(pred, 1, num_preds_per_seg)
+            grid.save(
                 os.path.join(output_dir, "img_gen", f"{batch_idx}_{i}_pred.png"),
             )
         for i, seg in enumerate(batch["images_target_raw"]):
@@ -220,6 +234,11 @@ if __name__ == "__main__":
         "--num_eval_batches",
         type=int,
         default=64,
+    )
+    parser.add_argument(
+        "--num_preds_per_seg",
+        type=int,
+        default=1,
     )
     parser.add_argument("--img_size", type=int, default=256)
     parser.add_argument("--num_img_channels", type=int, default=1)
@@ -302,6 +321,7 @@ if __name__ == "__main__":
         args.output_dir,
         args.ckpt_path,
         args.num_eval_batches,
+        args.num_preds_per_seg,
         args.img_size,
         args.num_img_channels,
         args.load_images_as_np_arrays,

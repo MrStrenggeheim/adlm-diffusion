@@ -244,7 +244,7 @@ def main():
     print("On gen: ", end=" ", flush=True)
     avg_dice_gen = calculate_dice(seg, seg_pred_gen, args.num_classes)
 
-    if not os.path.exists("eval_results.txt"):
+    if not os.path.exists("eval_results.csv"):
         with open("eval_results.csv", "w") as f:
             table_header = [
                 "Date",
