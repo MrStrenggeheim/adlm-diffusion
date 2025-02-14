@@ -13,8 +13,8 @@ Advisor: Robert Graf
 │   ├── amos_segmentator                : Unet based 2D segmenation model for amos data 
 │   ├── eda                             : Exploratory Data Analysis
 │   ├── evaluation                      : Scripts for evaluating image generations
-│   ├── showcase                        : Showcase images
 │   ├── segmenttation-guided-diffusion  : Diff-Moddel for seg guided image generation                 
+│   ├── showcase                        : Showcase images
 │   ├── utils                           : Utility functions
 │   │   ├── dataset                     : Data related code
 │   │   │   ├── amos.py                 : Custom dataset for amos data 
@@ -127,4 +127,19 @@ Original (MRI), Segmentation, Generated (CT)
 [<img src="./showcase/segmentation-guided-diffusion/mri_to_ct/11_seg.png" width="150"/>](./showcase/segmentation-guided-diffusion/mri_to_ct/11_seg.png)
 [<img src="./showcase/segmentation-guided-diffusion/mri_to_ct/12_pred.png" width="150"/>](./showcase/segmentation-guided-diffusion/mri_to_ct/12_pred.png)
 
+
+## Evaluation
+Original Image, Predicted Segmentation
+
+[<img src="./showcase/evaluation/0_6_img_original.png" width="150" style="padding-left: 153px;"/>](./showcase/evaluation/0_6_img_original.png)
+[<img src="./showcase/evaluation/0_6_seg_predict_on_orig.png" width="150"/>](./showcase/evaluation/0_6_seg_predicted_on_orig.png)
+
+<img src="https://www.shareicon.net/data/512x512/2015/09/17/102320_arrows_512x512.png" width="150" height="80" style="padding-left: 153px;"/>
+<img src="https://www.shareicon.net/data/512x512/2015/09/17/102320_arrows_512x512.png" width="150" height="80"/>
+
+[<img src="./showcase/evaluation/0_6_seg_orig.png" width="150"/>](./showcase/evaluation/0_6_seg_original.png)
+[<img src="./showcase/evaluation/0_6_img_generated.png" width="150"/>](./showcase/evaluation/0_6_img_predicted.png)
+[<img src="./showcase/evaluation/0_6_seg_predict_on_gen.png" width="150"/>](./showcase/evaluation/0_6_seg_predicted.png)
+
+Original Segmentation, Generated Image, Predicted Segmentation
 

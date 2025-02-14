@@ -20,7 +20,7 @@ python inference.py \
     --segmentation_channel_mode single \
     --num_segmentation_classes 73 \
     --train_batch_size 16 \
-    --eval_batch_size 2 \
+    --eval_batch_size 4 \
     --num_epochs 100 \
     --transforms "['ToTensor', 'Resize', 'CenterCrop', 'Normalize']" \
     --resume \
