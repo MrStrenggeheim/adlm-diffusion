@@ -128,7 +128,7 @@ Original (MRI), Segmentation, Generated (CT)
 [<img src="./showcase/segmentation-guided-diffusion/mri_to_ct/12_pred.png" width="150"/>](./showcase/segmentation-guided-diffusion/mri_to_ct/12_pred.png)
 
 
-## Evaluation
+## Evaluation using Segmentation (Dice Score)
 Original Image, Predicted Segmentation
 
 [<img src="./showcase/evaluation/0_6_img_original.png" width="150" style="padding-left: 153px;"/>](./showcase/evaluation/0_6_img_original.png)
