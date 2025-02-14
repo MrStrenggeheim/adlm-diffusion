@@ -129,6 +129,15 @@ Original (MRI), Segmentation, Generated (CT)
 
 
 ## Evaluation using Segmentation (Dice Score)
+
+Evaluation of the generated images using common similarity measure would not suffice since those generated images are conditioned on the segmentation masks only and intended to not pixel perfect represent the original images. Therefoe this evaluation pipeline exists: 
+
+1. We start off with original images and segmentations (left most images)
+2. We generate an image from the segmentation mask (bottom row, second image)
+    - we can already compare the images themselves here
+3. We predict segmentations on the original and segmentated images (right most images)
+4. We calculate dice score on those newly created images
+
 Original Image, Predicted Segmentation on Original
 
 
