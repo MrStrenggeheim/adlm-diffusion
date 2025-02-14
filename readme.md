@@ -43,7 +43,7 @@ Further details can be found in the [project report](./report.pdf).
 To install the required environment, run `pip install -r requirements.txt`.
 
 ## Usage
-Each folder contains names python scripts for the respective task. For more complex script calls, a bash script with default parameters is provided.
+Each folder contains named python scripts for the respective task. For more complex script calls, a bash script with default parameters is provided.
 
 Example workflow:
 

@@ -6,7 +6,7 @@ source activate py312
 python inference.py \
     --img_dir /vol/miltank/projects/practical_WS2425/diffusion/data/amos_robert_slices/images_all_axis \
     --seg_dir /vol/miltank/projects/practical_WS2425/diffusion/data/amos_robert_slices/labels_all_axis \
-    --output_dir /vol/miltank/projects/practical_WS2425/diffusion/code/evaluation/input/amos_mri_all_axis/final \
+    --output_dir /vol/miltank/projects/practical_WS2425/diffusion/code/evaluation/input/amos_mri_all_axis/single \
     --ckpt_path /vol/miltank/projects/practical_WS2425/diffusion/code/segmentation-guided-diffusion/output/ddim-amos_mri_all_axis-256-1-concat-segguided/ep20/unet \
     --num_eval_batches 8 \
     --img_size 256 \
