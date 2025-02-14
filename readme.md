@@ -95,15 +95,15 @@ Original, Segmentation, Generated
 
 
 [<img src="./showcase/segmentation-guided-diffusion/sample_ct_all_axis/2_13_img.png" width="150"/>](./showcase/segmentation-guided-diffusion/sample_ct_all_axis/2_13_img.png)
-[<img src="./showcase/segmentation-guided-diffusion/sample_ct_all_axis/2_13_seg.png" width="150"/>](./showcase/segmentation-guided-diffusion/sample_ct_all_axis/2_13_seg.png)
+[<img src="./showcase/segmentation-guided-diffusion/sample_ct_all_axis/2_13_seg_rgb.png" width="150"/>](./showcase/segmentation-guided-diffusion/sample_ct_all_axis/2_13_seg.png)
 [<img src="./showcase/segmentation-guided-diffusion/sample_ct_all_axis/2_13_pred.png" width="150"/>](./showcase/segmentation-guided-diffusion/sample_ct_all_axis/2_13_pred.png)
 
 [<img src="./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_31_img.png" width="150"/>](./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_31_img.png)
-[<img src="./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_31_seg.png" width="150"/>](./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_31_seg.png)
+[<img src="./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_31_seg_rgb.png" width="150"/>](./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_31_seg.png)
 [<img src="./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_31_pred.png" width="150"/>](./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_31_pred.png)
 
 [<img src="./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_26_img.png" width="150"/>](./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_26_img.png)
-[<img src="./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_26_seg.png" width="150"/>](./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_26_seg.png)
+[<img src="./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_26_seg_rgb.png" width="150"/>](./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_26_seg.png)
 [<img src="./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_26_pred.png" width="150"/>](./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_26_pred.png)
 
 
@@ -112,7 +112,7 @@ Original, Segmentation, Generated
 Original, Segmentation, Generated
 
 [<img src="./showcase/segmentation-guided-diffusion/multi_inference/0_img.png" width="150"/>](./showcase/segmentation-guided-diffusion/multi_inference/0_img.png)
-[<img src="./showcase/segmentation-guided-diffusion/multi_inference/1_seg.png" width="150"/>](./showcase/segmentation-guided-diffusion/multi_inference/1_seg.png)
+[<img src="./showcase/segmentation-guided-diffusion/multi_inference/1_seg_rgb.png" width="150"/>](./showcase/segmentation-guided-diffusion/multi_inference/1_seg.png)
 
 [<img src="./showcase/segmentation-guided-diffusion/multi_inference/2_pred.png" width="450"/>](./showcase/segmentation-guided-diffusion/multi_inference/2_pred.png)
 
@@ -120,11 +120,11 @@ Original, Segmentation, Generated
 Original (MRI), Segmentation, Generated (CT)
 
 [<img src="./showcase/segmentation-guided-diffusion/mri_to_ct/00_img.png" width="150"/>](./showcase/segmentation-guided-diffusion/mri_to_ct/00_img.png)
-[<img src="./showcase/segmentation-guided-diffusion/mri_to_ct/01_seg.png" width="150"/>](./showcase/segmentation-guided-diffusion/mri_to_ct/01_seg.png)
+[<img src="./showcase/segmentation-guided-diffusion/mri_to_ct/01_seg_rgb.png" width="150"/>](./showcase/segmentation-guided-diffusion/mri_to_ct/01_seg.png)
 [<img src="./showcase/segmentation-guided-diffusion/mri_to_ct/02_pred.png" width="150"/>](./showcase/segmentation-guided-diffusion/mri_to_ct/02_pred.png)
 
 [<img src="./showcase/segmentation-guided-diffusion/mri_to_ct/10_img.png" width="150"/>](./showcase/segmentation-guided-diffusion/mri_to_ct/10_img.png)
-[<img src="./showcase/segmentation-guided-diffusion/mri_to_ct/11_seg.png" width="150"/>](./showcase/segmentation-guided-diffusion/mri_to_ct/11_seg.png)
+[<img src="./showcase/segmentation-guided-diffusion/mri_to_ct/11_seg_rgb.png" width="150"/>](./showcase/segmentation-guided-diffusion/mri_to_ct/11_seg.png)
 [<img src="./showcase/segmentation-guided-diffusion/mri_to_ct/12_pred.png" width="150"/>](./showcase/segmentation-guided-diffusion/mri_to_ct/12_pred.png)
 
 
@@ -143,15 +143,15 @@ Original Image, Predicted Segmentation on Original
 
 [<img src="./showcase/transparent_256x256.png" width="150" alt=""/>]()
 [<img src="./showcase/evaluation/0_6_img_original.png" width="150"/>](./showcase/evaluation/0_6_img_original.png)
-[<img src="./showcase/evaluation/0_6_seg_predict_on_orig.png" width="150"/>](./showcase/evaluation/0_6_seg_predicted_on_orig.png)
+[<img src="./showcase/evaluation/0_6_seg_predict_on_orig_rgb.png" width="150"/>](./showcase/evaluation/0_6_seg_predicted_on_orig.png)
 
 [<img src="./showcase/transparent_256x256.png" width="150" height="80" alt=""/>]()
 [<img src="https://www.shareicon.net/data/512x512/2015/09/17/102320_arrows_512x512.png" width="150" height="80"/>]()
 [<img src="https://www.shareicon.net/data/512x512/2015/09/17/102320_arrows_512x512.png" width="150" height="80"/>]()
 
-[<img src="./showcase/evaluation/0_6_seg_orig.png" width="150"/>](./showcase/evaluation/0_6_seg_original.png)
+[<img src="./showcase/evaluation/0_6_seg_orig_rgb.png" width="150"/>](./showcase/evaluation/0_6_seg_original.png)
 [<img src="./showcase/evaluation/0_6_img_generated.png" width="150"/>](./showcase/evaluation/0_6_img_predicted.png)
-[<img src="./showcase/evaluation/0_6_seg_predict_on_gen.png" width="150"/>](./showcase/evaluation/0_6_seg_predicted.png)
+[<img src="./showcase/evaluation/0_6_seg_predict_on_gen_rgb.png" width="150"/>](./showcase/evaluation/0_6_seg_predicted.png)
 
 Original Segmentation, Generated Image, Predicted Segmentation on Generated Image
 

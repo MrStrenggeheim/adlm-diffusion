@@ -1,152 +1,519 @@
 {
-    "german": {
-        "0": "Hintergrund",
-        "1": "Milz",
-        "2": "rechte Niere",
-        "3": "linke Niere",
-        "4": "Gallenblase",
-        "5": "Leber",
-        "6": "Magen",
-        "7": "Bauchspeicheldrüse",
-        "8": "rechte Nebenniere",
-        "9": "linke Nebenniere",
-        "10": "linker oberer Lungenlappen",
-        "11": "linker unterer Lungenlappen",
-        "12": "rechter oberer Lungenlappen",
-        "13": "rechter mittlerer Lungenlappen",
-        "14": "rechter unterer Lungenlappen",
-        "15": "Speiseröhre",
-        "16": "Luftröhre",
-        "17": "Schilddrüse",
-        "18": "Darm",
-        "19": "Zwölffingerdarm",
-        "20": "nicht verwendet",
-        "21": "Harnblase",
-        "22": "Prostata",
-        "23": "Kreuzbein",
-        "24": "Herz",
-        "25": "Aorta",
-        "26": "Lungenvene",
-        "27": "Truncus brachiocephalicus",
-        "28": "rechte Schlüsselbeinarterie",
-        "29": "linke Schlüsselbeinarterie",
-        "30": "rechte Halsschlagader",
-        "31": "linke Halsschlagader",
-        "32": "linke Brachiocephalica Vene",
-        "33": "rechte Brachiocephalica Vene",
-        "34": "linkes Herzohr",
-        "35": "obere Hohlvene",
-        "36": "untere Hohlvene",
-        "37": "Pfortader und Milzvene",
-        "38": "linke Beckenarterie",
-        "39": "rechte Beckenarterie",
-        "40": "linke Beckenvene",
-        "41": "rechte Beckenvene",
-        "42": "linker Oberarmknochen",
-        "43": "rechter Oberarmknochen",
-        "44": "linkes Schulterblatt",
-        "45": "rechtes Schulterblatt",
-        "46": "linkes Schlüsselbein",
-        "47": "rechtes Schlüsselbein",
-        "48": "linker Oberschenkelknochen",
-        "49": "rechter Oberschenkelknochen",
-        "50": "linke Hüfte",
-        "51": "rechte Hüfte",
-        "52": "Rückenmark",
-        "53": "linker großer Gesäßmuskel",
-        "54": "rechter großer Gesäßmuskel",
-        "55": "linker mittlerer Gesäßmuskel",
-        "56": "rechter mittlerer Gesäßmuskel",
-        "57": "linker kleiner Gesäßmuskel",
-        "58": "rechter kleiner Gesäßmuskel",
-        "59": "linker Autochthonmuskel",
-        "60": "rechter Autochthonmuskel",
-        "61": "linker Lenden-Darmbeinmuskel",
-        "62": "rechter Lenden-Darmbeinmuskel",
-        "63": "Brustbein",
-        "64": "Rippenknorpel",
-        "65": "subkutanes Fett",
-        "66": "Muskel",
-        "67": "inneres Fett",
-        "68": "Bandscheibe",
-        "69": "Wirbelkörper",
-        "70": "hintere Wirbelelemente",
-        "71": "Wirbelkanal",
-        "72": "sonstiger Knochen"
-    },
-    "english": {
-        "0": "background",
-        "1": "spleen",
-        "2": "kidney_right",
-        "3": "kidney_left",
-        "4": "gallbladder",
-        "5": "liver",
-        "6": "stomach",
-        "7": "pancreas",
-        "8": "adrenal_gland_right",
-        "9": "adrenal_gland_left",
-        "10": "lung_upper_lobe_left",
-        "11": "lung_lower_lobe_left",
-        "12": "lung_upper_lobe_right",
-        "13": "lung_middle_lobe_right",
-        "14": "lung_lower_lobe_right",
-        "15": "esophagus",
-        "16": "trachea",
-        "17": "thyroid_gland",
-        "18": "intestine",
-        "19": "duodenum",
-        "20": "unused",
-        "21": "urinary_bladder",
-        "22": "prostate",
-        "23": "sacrum",
-        "24": "heart",
-        "25": "aorta",
-        "26": "pulmonary_vein",
-        "27": "brachiocephalic_trunk",
-        "28": "subclavian_artery_right",
-        "29": "subclavian_artery_left",
-        "30": "common_carotid_artery_right",
-        "31": "common_carotid_artery_left",
-        "32": "brachiocephalic_vein_left",
-        "33": "brachiocephalic_vein_right",
-        "34": "atrial_appendage_left",
-        "35": "superior_vena_cava",
-        "36": "inferior_vena_cava",
-        "37": "portal_vein_and_splenic_vein",
-        "38": "iliac_artery_left",
-        "39": "iliac_artery_right",
-        "40": "iliac_vena_left",
-        "41": "iliac_vena_right",
-        "42": "humerus_left",
-        "43": "humerus_right",
-        "44": "scapula_left",
-        "45": "scapula_right",
-        "46": "clavicula_left",
-        "47": "clavicula_right",
-        "48": "femur_left",
-        "49": "femur_right",
-        "50": "hip_left",
-        "51": "hip_right",
-        "52": "spinal_cord",
-        "53": "gluteus_maximus_left",
-        "54": "gluteus_maximus_right",
-        "55": "gluteus_medius_left",
-        "56": "gluteus_medius_right",
-        "57": "gluteus_minimus_left",
-        "58": "gluteus_minimus_right",
-        "59": "autochthon_left",
-        "60": "autochthon_right",
-        "61": "iliopsoas_left",
-        "62": "iliopsoas_right",
-        "63": "sternum",
-        "64": "costal_cartilages",
-        "65": "subcutaneous_fat",
-        "66": "muscle",
-        "67": "inner_fat",
-        "68": "IVD",
-        "69": "vertebra_body",
-        "70": "vertebra_posterior_elements",
-        "71": "spinal_channel",
-        "72": "bone_other"
-    }
+    "german": [
+        "Hintergrund",
+        "Milz",
+        "rechte Niere",
+        "linke Niere",
+        "Gallenblase",
+        "Leber",
+        "Magen",
+        "Bauchspeicheldrüse",
+        "rechte Nebenniere",
+        "linke Nebenniere",
+        "linker oberer Lungenlappen",
+        "linker unterer Lungenlappen",
+        "rechter oberer Lungenlappen",
+        "rechter mittlerer Lungenlappen",
+        "rechter unterer Lungenlappen",
+        "Speiseröhre",
+        "Luftröhre",
+        "Schilddrüse",
+        "Darm",
+        "Zwölffingerdarm",
+        "nicht verwendet",
+        "Harnblase",
+        "Prostata",
+        "Kreuzbein",
+        "Herz",
+        "Aorta",
+        "Lungenvene",
+        "Truncus brachiocephalicus",
+        "rechte Schlüsselbeinarterie",
+        "linke Schlüsselbeinarterie",
+        "rechte Halsschlagader",
+        "linke Halsschlagader",
+        "linke Brachiocephalica Vene",
+        "rechte Brachiocephalica Vene",
+        "linkes Herzohr",
+        "obere Hohlvene",
+        "untere Hohlvene",
+        "Pfortader und Milzvene",
+        "linke Beckenarterie",
+        "rechte Beckenarterie",
+        "linke Beckenvene",
+        "rechte Beckenvene",
+        "linker Oberarmknochen",
+        "rechter Oberarmknochen",
+        "linkes Schulterblatt",
+        "rechtes Schulterblatt",
+        "linkes Schlüsselbein",
+        "rechtes Schlüsselbein",
+        "linker Oberschenkelknochen",
+        "rechter Oberschenkelknochen",
+        "linke Hüfte",
+        "rechte Hüfte",
+        "Rückenmark",
+        "linker großer Gesäßmuskel",
+        "rechter großer Gesäßmuskel",
+        "linker mittlerer Gesäßmuskel",
+        "rechter mittlerer Gesäßmuskel",
+        "linker kleiner Gesäßmuskel",
+        "rechter kleiner Gesäßmuskel",
+        "linker Autochthonmuskel",
+        "rechter Autochthonmuskel",
+        "linker Lenden-Darmbeinmuskel",
+        "rechter Lenden-Darmbeinmuskel",
+        "Brustbein",
+        "Rippenknorpel",
+        "subkutanes Fett",
+        "Muskel",
+        "inneres Fett",
+        "Bandscheibe",
+        "Wirbelkörper",
+        "hintere Wirbelelemente",
+        "Wirbelkanal",
+        "sonstiger Knochen"
+    ],
+    "english": [
+        "background",
+        "spleen",
+        "kidney_right",
+        "kidney_left",
+        "gallbladder",
+        "liver",
+        "stomach",
+        "pancreas",
+        "adrenal_gland_right",
+        "adrenal_gland_left",
+        "lung_upper_lobe_left",
+        "lung_lower_lobe_left",
+        "lung_upper_lobe_right",
+        "lung_middle_lobe_right",
+        "lung_lower_lobe_right",
+        "esophagus",
+        "trachea",
+        "thyroid_gland",
+        "intestine",
+        "duodenum",
+        "unused",
+        "urinary_bladder",
+        "prostate",
+        "sacrum",
+        "heart",
+        "aorta",
+        "pulmonary_vein",
+        "brachiocephalic_trunk",
+        "subclavian_artery_right",
+        "subclavian_artery_left",
+        "common_carotid_artery_right",
+        "common_carotid_artery_left",
+        "brachiocephalic_vein_left",
+        "brachiocephalic_vein_right",
+        "atrial_appendage_left",
+        "superior_vena_cava",
+        "inferior_vena_cava",
+        "portal_vein_and_splenic_vein",
+        "iliac_artery_left",
+        "iliac_artery_right",
+        "iliac_vena_left",
+        "iliac_vena_right",
+        "humerus_left",
+        "humerus_right",
+        "scapula_left",
+        "scapula_right",
+        "clavicula_left",
+        "clavicula_right",
+        "femur_left",
+        "femur_right",
+        "hip_left",
+        "hip_right",
+        "spinal_cord",
+        "gluteus_maximus_left",
+        "gluteus_maximus_right",
+        "gluteus_medius_left",
+        "gluteus_medius_right",
+        "gluteus_minimus_left",
+        "gluteus_minimus_right",
+        "autochthon_left",
+        "autochthon_right",
+        "iliopsoas_left",
+        "iliopsoas_right",
+        "sternum",
+        "costal_cartilages",
+        "subcutaneous_fat",
+        "muscle",
+        "inner_fat",
+        "IVD",
+        "vertebra_body",
+        "vertebra_posterior_elements",
+        "spinal_channel",
+        "bone_other"
+    ],
+    "colors": [
+        [
+            0,
+            0,
+            0
+        ],
+        [
+            255,
+            0,
+            0
+        ],
+        [
+            0,
+            255,
+            0
+        ],
+        [
+            0,
+            0,
+            255
+        ],
+        [
+            255,
+            255,
+            0
+        ],
+        [
+            0,
+            255,
+            255
+        ],
+        [
+            255,
+            0,
+            255
+        ],
+        [
+            255,
+            239,
+            213
+        ],
+        [
+            0,
+            0,
+            205
+        ],
+        [
+            205,
+            133,
+            63
+        ],
+        [
+            210,
+            180,
+            140
+        ],
+        [
+            102,
+            205,
+            170
+        ],
+        [
+            0,
+            0,
+            128
+        ],
+        [
+            0,
+            139,
+            139
+        ],
+        [
+            46,
+            139,
+            87
+        ],
+        [
+            255,
+            228,
+            225
+        ],
+        [
+            106,
+            90,
+            205
+        ],
+        [
+            221,
+            160,
+            221
+        ],
+        [
+            233,
+            150,
+            122
+        ],
+        [
+            165,
+            42,
+            42
+        ],
+        [
+            255,
+            250,
+            250
+        ],
+        [
+            147,
+            112,
+            219
+        ],
+        [
+            218,
+            112,
+            214
+        ],
+        [
+            75,
+            0,
+            130
+        ],
+        [
+            255,
+            182,
+            193
+        ],
+        [
+            60,
+            179,
+            113
+        ],
+        [
+            255,
+            235,
+            205
+        ],
+        [
+            255,
+            228,
+            196
+        ],
+        [
+            218,
+            165,
+            32
+        ],
+        [
+            0,
+            128,
+            128
+        ],
+        [
+            188,
+            143,
+            143
+        ],
+        [
+            255,
+            105,
+            180
+        ],
+        [
+            255,
+            218,
+            185
+        ],
+        [
+            222,
+            184,
+            135
+        ],
+        [
+            127,
+            255,
+            0
+        ],
+        [
+            139,
+            69,
+            19
+        ],
+        [
+            124,
+            252,
+            0
+        ],
+        [
+            255,
+            255,
+            224
+        ],
+        [
+            70,
+            130,
+            180
+        ],
+        [
+            0,
+            100,
+            0
+        ],
+        [
+            238,
+            130,
+            238
+        ],
+        [
+            238,
+            232,
+            170
+        ],
+        [
+            240,
+            255,
+            240
+        ],
+        [
+            245,
+            222,
+            179
+        ],
+        [
+            184,
+            134,
+            11
+        ],
+        [
+            32,
+            178,
+            170
+        ],
+        [
+            255,
+            20,
+            147
+        ],
+        [
+            25,
+            25,
+            112
+        ],
+        [
+            112,
+            128,
+            144
+        ],
+        [
+            34,
+            139,
+            34
+        ],
+        [
+            248,
+            248,
+            255
+        ],
+        [
+            245,
+            255,
+            250
+        ],
+        [
+            255,
+            160,
+            122
+        ],
+        [
+            144,
+            238,
+            144
+        ],
+        [
+            173,
+            255,
+            47
+        ],
+        [
+            65,
+            105,
+            225
+        ],
+        [
+            255,
+            99,
+            71
+        ],
+        [
+            250,
+            240,
+            230
+        ],
+        [
+            128,
+            0,
+            0
+        ],
+        [
+            50,
+            205,
+            50
+        ],
+        [
+            244,
+            164,
+            96
+        ],
+        [
+            255,
+            255,
+            240
+        ],
+        [
+            123,
+            104,
+            238
+        ],
+        [
+            255,
+            165,
+            0
+        ],
+        [
+            173,
+            216,
+            230
+        ],
+        [
+            255,
+            192,
+            203
+        ],
+        [
+            127,
+            255,
+            212
+        ],
+        [
+            255,
+            140,
+            0
+        ],
+        [
+            143,
+            188,
+            143
+        ],
+        [
+            220,
+            20,
+            60
+        ],
+        [
+            253,
+            245,
+            230
+        ],
+        [
+            255,
+            250,
+            240
+        ],
+        [
+            0,
+            206,
+            209
+        ]
+    ]
 }
