@@ -2,9 +2,9 @@
 
 This is the main repository for our work on the WS24 master practical course `Applied Deep Learning in Medicine (IN2106, IN4314)`. 
 
-Topic: **Image Translation and Generation with Latent Diffusion**
-Students: Florian Hunecke, Chin Ju Chen
-Advisor: Robert Graf
+Topic: **Image Translation and Generation with Latent Diffusion** \
+Students: Florian Hunecke, Chin Ju Chen \
+Advisor: Robert Graf 
 
 ## Structure
 ```
