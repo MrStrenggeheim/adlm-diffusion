@@ -136,7 +136,7 @@ Original Image, Predicted Segmentation
 [<img src="./showcase/evaluation/0_6_img_original.png" width="150"/>](./showcase/evaluation/0_6_img_original.png)
 [<img src="./showcase/evaluation/0_6_seg_predict_on_orig.png" width="150"/>](./showcase/evaluation/0_6_seg_predicted_on_orig.png)
 
-[<img src="./showcase/transparent_256x256.png" width="150" alt="" height="80"/>]()
+[<img src="./showcase/transparent_256x256.png" width="150" alt=""/>]()
 [<img src="https://www.shareicon.net/data/512x512/2015/09/17/102320_arrows_512x512.png" width="150" height="80"/>]()
 [<img src="https://www.shareicon.net/data/512x512/2015/09/17/102320_arrows_512x512.png" width="150" height="80"/>]()
 
