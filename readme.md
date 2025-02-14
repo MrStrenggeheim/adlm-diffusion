@@ -134,6 +134,9 @@ Original Image, Predicted Segmentation
 [<img src="./showcase/evaluation/0_6_img_original.png" width="150" style="padding-left: 153px;"/>](./showcase/evaluation/0_6_img_original.png)
 [<img src="./showcase/evaluation/0_6_seg_predict_on_orig.png" width="150"/>](./showcase/evaluation/0_6_seg_predicted_on_orig.png)
 
+[<img src="https://www.shareicon.net/data/512x512/2015/09/17/102320_arrows_512x512.png" width="150" height="80" style="padding-left: 153px;"/>]()
+[<img src="https://www.shareicon.net/data/512x512/2015/09/17/102320_arrows_512x512.png" width="150" height="80"/>]()
+
 [<img src="./showcase/evaluation/0_6_seg_orig.png" width="150"/>](./showcase/evaluation/0_6_seg_original.png)
 [<img src="./showcase/evaluation/0_6_img_generated.png" width="150"/>](./showcase/evaluation/0_6_img_predicted.png)
 [<img src="./showcase/evaluation/0_6_seg_predict_on_gen.png" width="150"/>](./showcase/evaluation/0_6_seg_predicted.png)
