@@ -132,7 +132,7 @@ Original (MRI), Segmentation, Generated (CT)
 Original Image, Predicted Segmentation
 
 
-[<img src="./showcase/transparent_256x256.png" width="150"/>]()
+[<img src="./showcase/transparent_256x256.png" width="150" alt=""/>]()
 [<img src="./showcase/evaluation/0_6_img_original.png" width="150"/>](./showcase/evaluation/0_6_img_original.png)
 [<img src="./showcase/evaluation/0_6_seg_predict_on_orig.png" width="150"/>](./showcase/evaluation/0_6_seg_predicted_on_orig.png)
 
