@@ -11,6 +11,7 @@ Topic: **Image Translation and Generation with Latent Diffusion**
 │   ├── amos_segmentator                : Unet based 2D segmenation model for amos data 
 │   ├── eda                             : Exploratory Data Analysis
 │   ├── evaluation                      : Scripts for evaluating image generations
+│   ├── showcase                        : Showcase images
 │   ├── segmenttation-guided-diffusion  : Diff-Moddel for seg guided image generation                 
 │   ├── utils                           : Utility functions
 │   │   ├── dataset                     : Data related code
@@ -61,7 +62,7 @@ Example workflow:
     bash inference.sh
     ```
 
-    This will add segmentation masks to the generated and original images.
+    This will add segmentation masks in neighboring folders to the generated and original images.
 
 3. Evaluation of generated images
     ```bash
@@ -91,37 +92,37 @@ Example workflow:
 Original, Segmentation, Generated
 
 
-[<img src="./schowcase/segmentation-guided-diffusion/sample_ct_all_axis/2_13_img.png" width="150"/>]()
-[<img src="./schowcase/segmentation-guided-diffusion/sample_ct_all_axis/2_13_seg.png" width="150"/>]()
-[<img src="./schowcase/segmentation-guided-diffusion/sample_ct_all_axis/2_13_pred.png" width="150"/>]()
+[<img src="./showcase/segmentation-guided-diffusion/sample_ct_all_axis/2_13_img.png" width="150"/>](./showcase/segmentation-guided-diffusion/sample_ct_all_axis/2_13_img.png)
+[<img src="./showcase/segmentation-guided-diffusion/sample_ct_all_axis/2_13_seg.png" width="150"/>](./showcase/segmentation-guided-diffusion/sample_ct_all_axis/2_13_seg.png)
+[<img src="./showcase/segmentation-guided-diffusion/sample_ct_all_axis/2_13_pred.png" width="150"/>](./showcase/segmentation-guided-diffusion/sample_ct_all_axis/2_13_pred.png)
 
-[<img src="./schowcase/segmentation-guided-diffusion/sample_ct_all_axis/0_31_img.png" width="150"/>]()
-[<img src="./schowcase/segmentation-guided-diffusion/sample_ct_all_axis/0_31_seg.png" width="150"/>]()
-[<img src="./schowcase/segmentation-guided-diffusion/sample_ct_all_axis/0_31_pred.png" width="150"/>]()
+[<img src="./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_31_img.png" width="150"/>](./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_31_img.png)
+[<img src="./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_31_seg.png" width="150"/>](./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_31_seg.png)
+[<img src="./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_31_pred.png" width="150"/>](./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_31_pred.png)
 
-[<img src="./schowcase/segmentation-guided-diffusion/sample_ct_all_axis/0_26_img.png" width="150"/>]()
-[<img src="./schowcase/segmentation-guided-diffusion/sample_ct_all_axis/0_26_seg.png" width="150"/>]()
-[<img src="./schowcase/segmentation-guided-diffusion/sample_ct_all_axis/0_26_pred.png" width="150"/>]()
+[<img src="./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_26_img.png" width="150"/>](./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_26_img.png)
+[<img src="./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_26_seg.png" width="150"/>](./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_26_seg.png)
+[<img src="./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_26_pred.png" width="150"/>](./showcase/segmentation-guided-diffusion/sample_ct_all_axis/0_26_pred.png)
 
 
 
 ### Multi Inference
 Original, Segmentation, Generated
 
-[<img src="./schowcase/segmentation-guided-diffusion/multi_inference/0_img.png" width="150"/>]()
-[<img src="./schowcase/segmentation-guided-diffusion/multi_inference/1_seg.png" width="150"/>]()
+[<img src="./showcase/segmentation-guided-diffusion/multi_inference/0_img.png" width="150"/>](./showcase/segmentation-guided-diffusion/multi_inference/0_img.png)
+[<img src="./showcase/segmentation-guided-diffusion/multi_inference/1_seg.png" width="150"/>](./showcase/segmentation-guided-diffusion/multi_inference/1_seg.png)
 
-[<img src="./schowcase/segmentation-guided-diffusion/multi_inference/2_pred.png" width="450"/>]()
+[<img src="./showcase/segmentation-guided-diffusion/multi_inference/2_pred.png" width="450"/>](./showcase/segmentation-guided-diffusion/multi_inference/2_pred.png)
 
 ### MRI to CT Translation
 Original (MRI), Segmentation, Generated (CT)
 
-[<img src="./schowcase/segmentation-guided-diffusion/mri_to_ct/00_img.png" width="150"/>]()
-[<img src="./schowcase/segmentation-guided-diffusion/mri_to_ct/01_seg.png" width="150"/>]()
-[<img src="./schowcase/segmentation-guided-diffusion/mri_to_ct/02_pred.png" width="150"/>]()
+[<img src="./showcase/segmentation-guided-diffusion/mri_to_ct/00_img.png" width="150"/>](./showcase/segmentation-guided-diffusion/mri_to_ct/00_img.png)
+[<img src="./showcase/segmentation-guided-diffusion/mri_to_ct/01_seg.png" width="150"/>](./showcase/segmentation-guided-diffusion/mri_to_ct/01_seg.png)
+[<img src="./showcase/segmentation-guided-diffusion/mri_to_ct/02_pred.png" width="150"/>](./showcase/segmentation-guided-diffusion/mri_to_ct/02_pred.png)
 
-[<img src="./schowcase/segmentation-guided-diffusion/mri_to_ct/10_img.png" width="150"/>]()
-[<img src="./schowcase/segmentation-guided-diffusion/mri_to_ct/11_seg.png" width="150"/>]()
-[<img src="./schowcase/segmentation-guided-diffusion/mri_to_ct/12_pred.png" width="150"/>]()
+[<img src="./showcase/segmentation-guided-diffusion/mri_to_ct/10_img.png" width="150"/>](./showcase/segmentation-guided-diffusion/mri_to_ct/10_img.png)
+[<img src="./showcase/segmentation-guided-diffusion/mri_to_ct/11_seg.png" width="150"/>](./showcase/segmentation-guided-diffusion/mri_to_ct/11_seg.png)
+[<img src="./showcase/segmentation-guided-diffusion/mri_to_ct/12_pred.png" width="150"/>](./showcase/segmentation-guided-diffusion/mri_to_ct/12_pred.png)
 
 
