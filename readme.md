@@ -129,7 +129,7 @@ Original (MRI), Segmentation, Generated (CT)
 
 
 ## Evaluation using Segmentation (Dice Score)
-Original Image, Predicted Segmentation
+Original Image, Predicted Segmentation on Original
 
 
 [<img src="./showcase/transparent_256x256.png" width="150" alt=""/>]()
@@ -144,5 +144,5 @@ Original Image, Predicted Segmentation
 [<img src="./showcase/evaluation/0_6_img_generated.png" width="150"/>](./showcase/evaluation/0_6_img_predicted.png)
 [<img src="./showcase/evaluation/0_6_seg_predict_on_gen.png" width="150"/>](./showcase/evaluation/0_6_seg_predicted.png)
 
-Original Segmentation, Generated Image, Predicted Segmentation
+Original Segmentation, Generated Image, Predicted Segmentation on Generated Image
 
