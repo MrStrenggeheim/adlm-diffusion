@@ -45,5 +45,83 @@ To install the required environment, run `pip install -r requirements.txt`.
 ## Usage
 Each folder contains names python scripts for the respective task. For more complex script calls, a bash script with default parameters is provided.
 
+Example workflow:
+
+1. Sampling segmentation guided images
+    ```bash
+    cd code/segmentation-guided-diffusion
+    bash scripts/inf_ct_all_axis.sh
+    ```
+
+    This will load the amos slices test dataset and create a folder in `code/evaluation` containing the origianl images and segmentations as well as the generated images.
+
+2. Adding segmentations to generated images
+    ```bash
+    cd code/amos_segmentator
+    bash inference.sh
+    ```
+
+    This will add segmentation masks to the generated and original images.
+
+3. Evaluation of generated images
+    ```bash
+    cd code/evaluation
+    bash run.sh
+    ```
+
+    This will calculate SSIM, PSNR, FID, and Dice scores for the generated images.
+    Note: The Dice score will be evauated twice: between original masks and the generated masks on the original and generated images.
+    The first score accounts for validity of the segmentator to be used as a metric.
+
+4. Additional sampling
+    ```bash
+    cd code/segmentation-guided-diffusion
+    bash scripts/inf_multi_ct_all_axis.sh
+    bash scripts/inf_ct_all_axis_on_mri.sh
+    ```
+
+    Two additional scripts for
+    - sampling multiple variants for the same label
+    - using different trained models on different data modes 
+        e.g. use a CT trained model on MRI segmentations for MRI to CT translation
+
 ## Showcase
-TODO showcase folder
+
+### Segmentation Guided Diffusion Samples
+Original, Segmentation, Generated
+
+
+[<img src="./schowcase/segmentation-guided-diffusion/sample_ct_all_axis/2_13_img.png" width="150"/>]()
+[<img src="./schowcase/segmentation-guided-diffusion/sample_ct_all_axis/2_13_seg.png" width="150"/>]()
+[<img src="./schowcase/segmentation-guided-diffusion/sample_ct_all_axis/2_13_pred.png" width="150"/>]()
+
+[<img src="./schowcase/segmentation-guided-diffusion/sample_ct_all_axis/0_31_img.png" width="150"/>]()
+[<img src="./schowcase/segmentation-guided-diffusion/sample_ct_all_axis/0_31_seg.png" width="150"/>]()
+[<img src="./schowcase/segmentation-guided-diffusion/sample_ct_all_axis/0_31_pred.png" width="150"/>]()
+
+[<img src="./schowcase/segmentation-guided-diffusion/sample_ct_all_axis/0_26_img.png" width="150"/>]()
+[<img src="./schowcase/segmentation-guided-diffusion/sample_ct_all_axis/0_26_seg.png" width="150"/>]()
+[<img src="./schowcase/segmentation-guided-diffusion/sample_ct_all_axis/0_26_pred.png" width="150"/>]()
+
+
+
+### Multi Inference
+Original, Segmentation, Generated
+
+[<img src="./schowcase/segmentation-guided-diffusion/multi_inference/0_img.png" width="150"/>]()
+[<img src="./schowcase/segmentation-guided-diffusion/multi_inference/1_seg.png" width="150"/>]()
+
+[<img src="./schowcase/segmentation-guided-diffusion/multi_inference/2_pred.png" width="450"/>]()
+
+### MRI to CT Translation
+Original (MRI), Segmentation, Generated (CT)
+
+[<img src="./schowcase/segmentation-guided-diffusion/mri_to_ct/00_img.png" width="150"/>]()
+[<img src="./schowcase/segmentation-guided-diffusion/mri_to_ct/01_seg.png" width="150"/>]()
+[<img src="./schowcase/segmentation-guided-diffusion/mri_to_ct/02_pred.png" width="150"/>]()
+
+[<img src="./schowcase/segmentation-guided-diffusion/mri_to_ct/10_img.png" width="150"/>]()
+[<img src="./schowcase/segmentation-guided-diffusion/mri_to_ct/11_seg.png" width="150"/>]()
+[<img src="./schowcase/segmentation-guided-diffusion/mri_to_ct/12_pred.png" width="150"/>]()
+
+
