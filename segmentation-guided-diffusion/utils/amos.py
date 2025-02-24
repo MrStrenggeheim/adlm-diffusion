@@ -1,12 +1,29 @@
 import os
+import sys
 from typing import Literal
 
 import numpy as np
 import pandas as pd
 import torch
+import torchvision.transforms.functional as F
 from PIL import Image
 from torch.utils.data import Dataset
 from torchvision import transforms as tt
+
+
+class PadToSquare(tt.Pad):
+    def __init__(self, fill=0, padding_mode="constant"):
+        super().__init__(padding=(0, 0), fill=fill, padding_mode=padding_mode)
+
+    def forward(self, img):
+        _, h, w = F.get_dimensions(img)
+        if w == h:
+            return img
+        elif w > h:
+            padding = (0, (w - h) // 2)
+        else:
+            padding = ((h - w) // 2, 0)
+        return F.pad(img, padding, self.fill, self.padding_mode)
 
 
 def parse_transforms(transforms, num_img_channels, img_size):
@@ -30,9 +47,13 @@ def parse_transforms(transforms, num_img_channels, img_size):
             transform_img.append(tt.CenterCrop(img_size))
             transform_seg.append(tt.CenterCrop(img_size))
             transform_raw.append(tt.CenterCrop(img_size))
+        elif t == "PadToSquare":
+            transform_img.append(PadToSquare())
+            transform_seg.append(PadToSquare())
+            transform_raw.append(PadToSquare())
         elif t == "ColorJitter":
             transform_img.append(
-                tt.ColorJitter(brightness=0.1, contrast=0.1, saturation=0.1)
+                tt.ColorJitter(brightness=0.1, contrast=0, saturation=0)
             )
         elif t == "Normalize":
             transform_img.append(
@@ -75,22 +96,41 @@ class AmosDataset(Dataset):
         print(f"Loading Amos {split} data")
         print(f"Images folder: {self.images_folder}")
         print(f"Labels folder: {self.labels_folder}")
+        sys.stdout.flush()
 
         # load images, do recursive search for all images in multiple folders
         images_list = []
         labels_list = []
-        for root, _, files in os.walk(self.images_folder, followlinks=True):
-            print("Including images from", os.path.relpath(root, self.images_folder))
-            for file in files:
-                images_list.append(
-                    os.path.join(os.path.relpath(root, self.images_folder), file)
-                )
-        for root, _, files in os.walk(self.labels_folder, followlinks=True):
-            print("Including labels from", os.path.relpath(root, self.labels_folder))
-            for file in files:
-                labels_list.append(
-                    os.path.join(os.path.relpath(root, self.labels_folder), file)
-                )
+
+        # Assertion: either only files or only 1 level of subfolders !!!
+        # get first file in dir
+        images_list = os.listdir(self.images_folder)
+        labels_list = os.listdir(self.labels_folder)
+
+        if len(images_list) == 0:
+            raise ValueError(f"No images found in {self.images_folder}")
+        if len(labels_list) == 0:
+            raise ValueError(f"No labels found in {self.labels_folder}")
+
+        if os.path.isdir(os.path.join(self.images_folder, images_list[0])):
+            print(
+                f"Found subfolders in images folder. Loading {len(images_list)} subfolders ..."
+            )
+            images_list = [
+                os.path.join(subfolder, image)
+                for subfolder in images_list
+                for image in os.listdir(os.path.join(self.images_folder, subfolder))
+            ]
+        if os.path.isdir(os.path.join(self.labels_folder, labels_list[0])):
+            print(
+                f"Found subfolders in labels folder. Loading {len(labels_list)} subfolders ..."
+            )
+            labels_list = [
+                os.path.join(subfolder, label)
+                for subfolder in labels_list
+                for label in os.listdir(os.path.join(self.labels_folder, subfolder))
+            ]
+
         images_list = sorted(images_list)
         labels_list = sorted(labels_list)
         # Assume that the images and labels are named the same

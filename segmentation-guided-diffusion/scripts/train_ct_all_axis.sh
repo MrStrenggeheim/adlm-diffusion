@@ -9,7 +9,7 @@
 #SBATCH --mem=16G
 #SBATCH --gres=gpu:1
 # make sure to not get interrupted
-##SBATCH --qos=master-queuesave
+#SBATCH --qos=master-queuesave
 ##SBATCH --partition=universe,asteroids
 
 ml python/anaconda3
@@ -21,7 +21,7 @@ python main.py \
     --mode train \
     --img_size 256 \
     --num_img_channels 1 \
-    --dataset amos_ct_all_axis \
+    --dataset reftest_amos_ct_all_axis \
     --img_dir /vol/miltank/projects/practical_WS2425/diffusion/data/amos_robert_slices/images_all_axis \
     --seg_dir /vol/miltank/projects/practical_WS2425/diffusion/data/amos_robert_slices/labels_all_axis \
     --model_type DDIM \

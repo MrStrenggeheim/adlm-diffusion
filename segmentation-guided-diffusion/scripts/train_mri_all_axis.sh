@@ -14,8 +14,11 @@
 
 ml python/anaconda3
 
+nvidia-smi
+
 source deactivate
 source activate py312
+
 
 python main.py \
     --mode train \

@@ -1,8 +1,6 @@
 import os
 from argparse import ArgumentParser
 
-import datasets
-
 # HF imports
 import diffusers
 import numpy as np
@@ -10,7 +8,6 @@ import pandas as pd
 
 # torch imports
 import torch
-import torch.nn.functional as F
 from diffusers.optimization import get_cosine_schedule_with_warmup
 from eval import evaluate_generation, evaluate_sample_many
 from torch import nn
@@ -153,6 +150,7 @@ def main(
             batch_size=config.train_batch_size,
             shuffle=True,
             num_workers=16,
+            prefetch_factor=16,
         )
 
         eval_dataloader = torch.utils.data.DataLoader(
@@ -160,6 +158,7 @@ def main(
             batch_size=config.eval_batch_size,
             shuffle=eval_shuffle_dataloader,
             num_workers=16,
+            prefetch_factor=16,
         )
 
     # define the model

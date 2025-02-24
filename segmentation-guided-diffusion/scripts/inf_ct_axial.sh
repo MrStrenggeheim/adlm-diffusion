@@ -4,14 +4,14 @@ source deactivate
 source activate py312
 
 python inference.py \
-    --img_dir /vol/miltank/projects/practical_WS2425/diffusion/data/amos_robert_slices/images_all_axis \
-    --seg_dir /vol/miltank/projects/practical_WS2425/diffusion/data/amos_robert_slices/labels_all_axis \
-    --output_dir /vol/miltank/projects/practical_WS2425/diffusion/code/evaluation/input/amos_ct_all_axis/single_nopad \
+    --img_dir /vol/miltank/projects/practical_WS2425/diffusion/data/amos_robert_slices/images_axial \
+    --seg_dir /vol/miltank/projects/practical_WS2425/diffusion/data/amos_robert_slices/labels_axial \
+    --output_dir /vol/miltank/projects/practical_WS2425/diffusion/code/evaluation/input/amos_ct_axial/single_nopad \
     --ckpt_path /vol/miltank/projects/practical_WS2425/diffusion/code/segmentation-guided-diffusion/output/ddim-amos_ct_all_axis-256-1-concat-segguided/epoch_0/unet \
     --num_eval_batches 64 \
     --img_size 256 \
     --num_img_channels 1 \
-    --dataset amos_ct_all_axis \
+    --dataset amos_ct_axial \
     --model_type DDIM \
     --img_type CT \
     --segmentation_guided \

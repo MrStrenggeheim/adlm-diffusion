@@ -21,13 +21,18 @@ CT_IDX_RANGE = range(0, 500)
 
 # give input names with ending / and output names without /
 MAPPING = [
-    {"in": "amos22/imagesTr/", "out": "amos_slices/imagesTr", "seg": False},
-    {"in": "amos22/imagesVa/", "out": "amos_slices/imagesVa", "seg": False},
-    {"in": "amos22/imagesTs/", "out": "amos_slices/imagesTs", "seg": False},
+    # {"in": "amos22/imagesTr/", "out": "amos_slices/imagesTr", "seg": False},
+    # {"in": "amos22/imagesVa/", "out": "amos_slices/imagesVa", "seg": False},
+    # {"in": "amos22/imagesTs/", "out": "amos_slices/imagesTs", "seg": False},
     # {"in": "amos_robert/labelsTr/", "out": "amos_robert_slices/labelsTr", "seg": True},
     # {"in": "amos_robert/labelsVa/", "out": "amos_robert_slices/labelsVa", "seg": True},
     # {"in": "amos_robert/labelsTs/", "out": "amos_robert_slices/labelsTs", "seg": True},
+    {"in": "amos22/labelsVa/", "out": "amos_slices/labelsVa", "seg": True},
 ]
+
+
+def is_ct(file_name):
+    return int(file_name.split("_")[1].split(".")[0]) in CT_IDX_RANGE
 
 
 def load_nii(file_name, nii_folder, is_seg):
@@ -38,21 +43,24 @@ def load_nii(file_name, nii_folder, is_seg):
     return nii.get_array()
 
 
-def safe_normalize(array, new_min=0, new_max=1):
-    if array.max() == array.min():
+def safe_normalize(array, new_min=0, new_max=1, percentile: int = None):
+    old_min = array.min()
+    old_max = array.max()
+    if old_min == old_max:
         return array
-    return (array - array.min()) / (array.max() - array.min()) * (
-        new_max - new_min
-    ) + new_min
+    if percentile:
+        old_min = np.percentile(array, percentile)
+        old_max = np.percentile(array, 100 - percentile)
+        array = np.clip(array, old_min, old_max)
+    return (array - old_min) / (old_max - old_min) * (new_max - new_min) + new_min
 
 
 def normalize_nii(nii_np, file_name, is_seg):
     if not is_seg:
-        is_ct = int(file_name.split("_")[1].split(".")[0]) in CT_IDX_RANGE
-        if is_ct:
+        if is_ct(file_name):
             # clip only if is CT
             nii_np = np.clip(nii_np, CLIPPING_RANGE[0], CLIPPING_RANGE[1])
-        nii_np = safe_normalize(nii_np, 0, 255)
+        nii_np = safe_normalize(nii_np, 0, 255, percentile=1)
     if is_seg and SCALE_LABELS:
         nii_np = safe_normalize(nii_np, 0, 255)
     return nii_np
