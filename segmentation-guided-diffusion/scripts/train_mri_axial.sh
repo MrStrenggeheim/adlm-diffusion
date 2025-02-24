@@ -2,8 +2,8 @@
 #SBATCH --job-name=sgd-amos_mri_axial
 #SBATCH --mail-user=florian.hunecke@tum.de
 #SBATCH --mail-type=ALL
-#SBATCH --output=logs/amos_mri_axial2.out
-#SBATCH --error=logs/amos_mri_axial2.err
+#SBATCH --output=logs/amos_mri_axial.out
+#SBATCH --error=logs/amos_mri_axial.err
 #SBATCH --time=7-00:00:00
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
@@ -36,5 +36,5 @@ python main.py \
     --train_batch_size 32 \
     --eval_batch_size 16 \
     --num_epochs 100 \
-    --transforms "['ToTensor', 'PadToSquare', 'Resize', 'CenterCrop', 'Normalize']" \
+    --transforms "['ToTensor', 'Resize', 'CenterCrop', 'Normalize']" \
     --resume \
